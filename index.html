@@ -1,26 +1,33 @@
 <html>
 
 <head>
+  <!--this will create a link to the style sheet to this page to give it the correct styling-->
   <link rel="stylesheet" href="stylesheet.css">
+  <!--this will display in the tab section of the webpage-->
   <title>Fizz Buzz Challenge</title>
 </head>
 
 <body>
 
+  <!-- this would be the title on the page-->
   <h1>FIZZ BUZZ CHALLENGE!</h1>
 
+  <!--just underneath this will be a pointer for the user to change the values in the form-->
   <h3>Feel free to switch up the values in the text boxes...</h3>
-  <!--this sets the P tag that the JavaScript would write into-->
+
   <form id="inputForm">
     <div>
+      <!-- this has been set to number input only to limit what is entered-->
       <p>Start: </p> <input type="number" id="Start" value="1">
 
       <p>End: </p> <input type="number" id="Finish" value="100">
 
-      <p>Multiple 1: </p> <input type="text" id="Multi1" value="3">
+      <!--this will allow the users to change when the words are written, using number input boxes-->
+      <p>Multiple 1: </p> <input type="number" id="Multi1" value="3">
 
       <p>Multiple 2: </p> <input type="number" id="Multi2" value="5">
 
+      <!--these are set to text so the user can input their own text-->
       <p>Word 1: </p> <input type="text" id="Word1" value="Fizz">
 
       <p>Word 2: </p> <input type="text" id="Word2" value="Buzz">
@@ -28,7 +35,6 @@
       <br />
       <br />
 
-      <!--<input type="submit" id="myBtn">-->
     </div>
   </form>
   <br />
@@ -39,9 +45,10 @@
   <button class="button" id="btnRefresh" onclick="document.location.reload(true)">Refresh Page</button>
   <!--this will refresh the page so the values are reset-->
 
-  <br /> <br />
+  <br /> <br /> <!-- this creates the space between the buttons and the second div-->
 
   <div id="countUpDiv">
+    <!--this creates a seperate div for the outcome to be written to-->
     <h3 id="outcomeTitle">The outcome...</h3>
     <br />
     <p id='FizzBuzz'></p>
@@ -93,7 +100,7 @@
     });
 
     /*Functions*/
-    function typeWriter() {     //this will type the text on screen asif it was being written
+    function typeWriter() { //this will type the text on screen asif it was being written
       if (t < text.length) {
         document.querySelector('#FizzBuzz').innerHTML += text.charAt(t);
         t++;
