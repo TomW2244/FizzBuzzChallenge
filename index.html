@@ -1,3 +1,106 @@
 <html>
-<h1>hi</h1>
+
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Fizz Buzz Challenge</title>
+</head>
+
+<body>
+
+  <h1>FIZZ BUZZ CHALLENGE!</h1>
+
+  <h3>Feel free to switch up the values in the text boxes...</h3>
+  <!--this sets the P tag that the JavaScript would write into-->
+  <form id="inputForm">
+    <div>
+      <p>Start: </p> <input type="number" id="Start" value="1">
+
+      <p>End: </p> <input type="number" id="Finish" value="100">
+
+      <p>Multiple 1: </p> <input type="text" id="Multi1" value="3">
+
+      <p>Multiple 2: </p> <input type="number" id="Multi2" value="5">
+
+      <p>Word 1: </p> <input type="text" id="Word1" value="Fizz">
+
+      <p>Word 2: </p> <input type="text" id="Word2" value="Buzz">
+
+      <br />
+      <br />
+
+      <!--<input type="submit" id="myBtn">-->
+    </div>
+  </form>
+  <br />
+
+  <button class="button" id="btnMIH">Make it happen!</button>
+  <!--this will trigger functions in Script-->
+
+  <button class="button" id="btnRefresh" onclick="document.location.reload(true)">Refresh Page</button>
+  <!--this will refresh the page so the values are reset-->
+
+  <br /> <br />
+
+  <div id="countUpDiv">
+    <h3 id="outcomeTitle">The outcome...</h3>
+    <br />
+    <p id='FizzBuzz'></p>
+    <!--this creates the p tag to be written into-->
+  </div>
+
+  <br>
+  <br>
+
+  <script>
+    /*Variables*/
+    var button = document.querySelector('#btnMIH');
+    var i;
+    var text = '';
+    var t = 0;
+    var speed = 60;
+
+    button.addEventListener('click', function() {
+      /*this grabs the words from the text box*/
+      var formPull = document.getElementById('inputForm');
+      var word1 = formPull.elements['Word1'].value;
+      var word2 = formPull.elements['Word2'].value;
+      var fizz = formPull.elements['Multi1'].value;
+      var buzz = formPull.elements['Multi2'].value;
+      var start = formPull.elements['Start'].value;
+      var finish = formPull.elements['Finish'].value; //these pull the elements from the text boxes that will have data in them
+      var e = document.getElementById('countUpDiv'); //this will pull the div and store is as e
+
+      e.style.display = 'inline-block'; //this will make the div appear when it is clicked
+
+      /*this is the start of the for loop for the numbers*/
+      for (var i = start; i <= finish; i++) {
+        if (i % fizz === 0 && i % buzz === 0) {
+          // Says 'FizzBuzz' after multiples of three and five
+          text = text + `${word1}${word2}, `;
+        } else if (i % fizz === 0) {
+          // Says 'Fizz' after multiples of three
+          text = text + `${word1}, `;
+        } else if (i % buzz === 0) {
+          // Says 'Buzz' after multiples of five
+          text = text + `${word2}, `;
+        } else {
+          //this displays the number
+          text = text + i + ', ';
+        }
+      }
+      //this will set the fucntion to type the text to the page.
+      typeWriter();
+    });
+
+    /*Functions*/
+    function typeWriter() {     //this will type the text on screen asif it was being written
+      if (t < text.length) {
+        document.querySelector('#FizzBuzz').innerHTML += text.charAt(t);
+        t++;
+        setTimeout(typeWriter, speed); //determines the speed and when it the function ends.
+      }
+    }
+  </script>
+</body>
+
 </html>

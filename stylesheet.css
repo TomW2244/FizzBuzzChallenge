@@ -1,0 +1,89 @@
+body {
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background-image: linear-gradient(to bottom right, #12D0ED, #084BBF);
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-weight: strong;
+  font-size: 45px;
+  text-align: center;
+}
+
+h3 {
+  color: black;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  margin-bottom: 5px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  color: black;
+  font-family: Impact, Charcoal, sans-serif;
+  font size:  !important 250px;
+}
+
+#outcomeTitle {
+  color: black;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  margin-bottom: -35px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+#inputForm {
+  background: #DCDCDC;
+  font-size: 15px;
+  padding: 15px;
+  margin: 5px 0;
+  width: 375px;
+  display: inline-block;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3), 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+#countUpDiv {
+  background: #DCDCDC;
+  font-size: 15px;
+  padding: 15px;
+  margin: 5px;
+  height: auto;
+  width: 450px;
+  display: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3), 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.button {
+  background: #727272;
+  color: #010101;
+  border: 0px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  text-shadow: none;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 30px;
+}
+
+.button:hover {
+  background: #AEAAAA;
+  color: #010101;
+  border: 0px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  text-shadow: none;
+}
